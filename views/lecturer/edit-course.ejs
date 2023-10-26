@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/920978046016716840/1166677207565991946/CS.png?ex=654b5bd2&is=6538e6d2&hm=68edaa90823a686043c61155db8620046ff5d2a78efa530ecc5ca87bb75e8bf1&"
+        type="image/x-icon">
+
+
+</head>
+
+<body class="min-h-screen bg-black" style="font-family: 'Kanit', sans-serif;">
+
+    <%- include('../navbar')%>
+
+        <form method="POST" action="/update-course/<%= detail.id %>">
+            <div class="bg-orange-500 text-center py-5 pt-24">
+                <h1 class="text-white text-6xl font-bold">EDIT COURSE</h1>
+            </div>
+
+            <div class="flex items-center mt-[100px] ml-[100px]">
+                <img src="https://cdn0.iconfinder.com/data/icons/business-management-197/55/Books-512.png"
+                    alt="PNG trophy" class="w-14 h-14" />
+                <div class="text-white text-4xl ml-4">ข้อมูลผู้สอน</div>
+            </div>
+            <div class="flex items-center mt-[30px] ml-[100px]">
+                <img src="https://www.meetministry.org/media/commerce_products/117/home_study_course_store.jpg"
+                    alt="PNG course" class="w-[450px] h-[350px] mt-[40px] ml-[5px]" />
+                <div class="flex flex-col items-start">
+                    <input type="text" value="<%= detail.lec_name %>" name="lec_name"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="ชื่อจริง นามสกุล ผู้สอน :">
+                    <input type="text" value="<%= detail.lec_nickname %>" name="lec_nickname"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="ชื่อเล่นผู้สอน :">
+                    <input type="text" value="<%= detail.role %>" name="role"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="ตำแหน่ง / ชั้นปี :">
+                    <input type="text" value="<%= detail.date %>" name="date"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="วันที่จัด :">
+                    <input type="text" value="<%= detail.time %>" name="time"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="เวลาที่จัด :">
+
+                </div>
+            </div>
+
+            <div class="flex items-center mt-[100px] ml-[100px]">
+                <img src="https://cdn0.iconfinder.com/data/icons/business-management-197/55/Books-512.png"
+                    alt="PNG trophy" class="w-14 h-14" />
+                <div class="text-white text-4xl ml-4">ข้อมูลคอร์ส</div>
+            </div>
+            <div class="flex items-center mt-[30px] ml-[100px]">
+                <img src="https://www.meetministry.org/media/commerce_products/117/home_study_course_store.jpg"
+                    alt="PNG course" class="w-[450px] h-[350px] mt-[40px] ml-[5px]" />
+                <div class="flex flex-col items-start">
+                    <input type="text" value="<%= detail.course_name %>" name="course_name"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="ข้อความสั้น ๆ สำหรับแนะนำคอร์ส :">
+                    <input type="text" value="<%= detail.des %>" name="des"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="ข้อความสั้น ๆ สำหรับแนะนำคอร์ส :">
+                    <input type="text" value="<%= detail.device %>" name="device"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="อุปกรณ์ที่อยากให้ผู้เข้าเรียนเตรียมมา :">
+                    <input type="text" value="<%= detail.tool %>" name="tool"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="เครื่องมือหรือโปรแกรมที่ต้องการให้ผู้เรียนเตรียมมา :">
+                    <input type="text" value="<%= detail.more %>" name="more"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="เพิ่มเติม :">
+                    <input type="text" value="<%= detail.contact %>" name="contact"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="ช่องทางติดต่อผู้สอน :">
+                    <input type="text" name="picture" value="<%= detail.picture %>"
+                        class="mt-[35px] ml-[50px] w-[700px] h-[40px] bg-white text-black rounded-3xl p-4"
+                        placeholder="URL รูปภาพสำหรับประชาสัมพันธ์ :">
+
+                </div>
+            </div>
+
+            <div class="flex flex-col items-start">
+                <div class="rounded-none bg-[#EE7832] text-white mt-[60px] ml-[110px] p-1">เนื้อหา
+                    หรือหัวข้อที่จะสอนในคอร์สในแต่ละวัน :</div>
+                <textarea
+                    class="mt-[35px] ml-[110px] mb-[150px] w-[1200px] h-[200px] bg-white text-black rounded-2xl p-4"
+                    name="content"
+                    placeholder="เนื้อหา หรือหัวข้อที่จะสอนในคอร์สในแต่ละวัน :"><%= detail.content %></textarea>
+            </div>
+            <div class="text-right mr-[200px] mt-[-120px]">
+                <button
+                    class="w-[140px] h-[54px] px-4 py-2.5 bg-amber-200 from-orange-600 to-yellow-400 rounded-full justify-center items-center gap-2 inline-flex border-2 border-transparent transition-transform transform hover:scale-105 ml-10 ">
+                    <div class="text-black text-2xl font-normal font-KMITLGO">SUBMIT</div>
+                </button>
+                </a>
+            </div>
+
+        </form>
+
+</body>
+
+</html>

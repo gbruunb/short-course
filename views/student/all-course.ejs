@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="icon"
+        href="https://cdn.discordapp.com/attachments/920978046016716840/1166677207565991946/CS.png?ex=654b5bd2&is=6538e6d2&hm=68edaa90823a686043c61155db8620046ff5d2a78efa530ecc5ca87bb75e8bf1&"
+        type="image/x-icon">
+
+
+
+</head>
+
+<body class=" bg-black" style="font-family: 'Kanit', sans-serif;">
+    <%- include('../navbar')%>
+
+        <div class="bg-orange-500 text-center py-5 pt-24">
+            <h1 class="text-white text-6xl font-bold font-KMITLGO">COURSE</h1>
+        </div>
+
+
+        <div class="container mx-auto pt-32 pb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+
+                <% for (const course of courses) { %>
+                    <div class="p-4 border border-gray-200 rounded-lg bg-white">
+                        <img src="<%= course.picture %>" alt "Course 2" class="w-full h-40 object-cover rounded-lg">
+                        <h3 class="text-lg font-semibold mt-2">
+                            <%= course.course_name %>
+                        </h3>
+                        <p class="text-gray-600 mt-1">
+                            <%= course.des %>
+                        </p>
+                        <a href="/reg/<%= course.id %>"
+                            class="mt-4 block bg-blue-500 text-white rounded-full py-2 px-4 text-center font-semibold hover:bg-blue-600">ดูรายละเอียด
+                        </a>
+                    </div>
+                    <% } %>
+
+
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>

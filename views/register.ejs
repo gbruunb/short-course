@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Short Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-black">
+    <div class="fixed rounded-full w-[30px] h-[30px] bg-white top-[50px] left-[50px]"></div>
+    <div class="fixed rounded-full w-[30px] h-[30px] bg-white top-[50px] right-[50px]"></div>
+    <div class="fixed rounded-full w-[30px] h-[30px] bg-white bottom-[50px] left-[50px]"></div>
+    <div class="fixed rounded-full w-[30px] h-[30px] bg-white bottom-[50px] right-[50px]"></div>
+    <form action="/register" method="post">
+        <div class="flex h-screen justify-center items-center flex-col">
+            <div class="text-white text-5xl font-bold font-font-sans pb-4 mt-[30px] flex items-center">
+                <span class="mr-2">REGISTER</span>
+                <img src="https://icon-library.com/images/registration-icon/registration-icon-7.jpg" alt="PNG Register"
+                    class="w-14 h-14" />
+            </div>
+            <div class="grid grid-cols-3 gap-4 p-[20px]">
+                <div>
+                    <div class="text-white text-lg mb-2">Prefix Name :</div>
+                    <select id="countries" name="prefix" class="rounded-2xl h-[60px] text-black w-[278px] p-2" required>
+                        <option selected>Choose your prefix </option>
+                        <option value="B">เด็กชาย</option>
+                        <option value="G">เด็กหญิง</option>
+                        <option value="BB">นาย</option>
+                        <option value="GG">นางสาว</option>
+                        <option value="GGN">นาง</option>
+                        <option value="N">ไม่ระบุ</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Name :</div>
+                    <input type="text" name="fname" class="rounded-2xl h-[60px] text-black w-[278px] p-2"
+                        placeholder="Enter your Name" required />
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Lastname :</div>
+                    <input type="text" name="lname" class="rounded-2xl h-[60px] text-black w-[278px] p-2"
+                        placeholder="Enter your Lastname" required />
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 p-0">
+                <div>
+                    <div class="text-white text-lg mb-2">Nickname :</div>
+                    <input type="text" name="nickname" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                        placeholder="Enter your Nickname" required />
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Student ID :</div>
+                    <input type="text" name="student_id" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                        placeholder="Enter your Student ID " required />
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Year class :</div>
+                    <select id="countries" name="years" class="rounded-2xl h-[60px] text-black w-[425px] p-2" required>
+                        <option selected>Choose your year class </option>
+                        <option value="one">ปี 1</option>
+                        <option value="two">ปี 2</option>
+                        <option value="three">ปี 3</option>
+                        <option value="four">ปี 4</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Email :</div>
+                    <input type="text" name="email" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                        placeholder="Enter your Email" required />
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Password :</div>
+                    <input type="password" name="password" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                        placeholder="•••••••••" required>
+                </div>
+                <div>
+                    <div class="text-white text-lg mb-2">Confirm Password :</div>
+                    <input type="password" name="confirm_password" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                        placeholder="•••••••••" required>
+                </div>
+            </div>
+            <a href="#">
+                <button
+                    class="w-[120px] h-[39px] px-4 py-2.5 bg-amber-200 from-orange-600 to-yellow-400 rounded-full justify-center items-center gap-2 inline-flex border-2 border-transparent transition-transform transform hover:scale-105 mt-[30px] ">
+                    <div class="text-black text-xl font-normal font-['KMITLGO']">REGISTER</div>
+                </button>
+            </a>
+        </div>
+    </form>
+</body>
+
+</html>

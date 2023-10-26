@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="icon"
+    href="https://cdn.discordapp.com/attachments/920978046016716840/1166677207565991946/CS.png?ex=654b5bd2&is=6538e6d2&hm=68edaa90823a686043c61155db8620046ff5d2a78efa530ecc5ca87bb75e8bf1&"
+    type="image/x-icon">
+
+
+
+</head>
+
+<body class=" bg-black" style="font-family: 'Kanit', sans-serif;">
+
+  <%- include('../navbar')%>
+
+    <div class="bg-orange-500 text-center py-5 pt-24">
+      <h1 class="text-white text-6xl font-bold">COURSE</h1>
+    </div>
+
+    <div class="containner m-10">
+      <h1>Course ทั้งหมด </h1>
+      <table class=" w-full">
+        <thead class="bg-orange-600 border-b-2 border-grey-200">
+          <tr>
+            <th class="p-3 text-sm font-semibold ">ลำดับ</th>
+            <th class="p-3 text-sm font-semibold border-white-600">ชื่อคอร์ส</th>
+            <th class="p-3 text-sm font-semibold border-white-600">ผู้สอน</th>
+            <th class="p-3 text-sm font-semibold border-white-600">วันที่</th>
+            <th class="p-3 text-sm font-semibold border-white-600">เวลา</th>
+            <th class="p-3 text-sm font-semibold border-white-600">รายละเอียด</th>
+            <th class="p-3 text-sm font-semibold border-white-600">แก้ไขคอร์ส</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% var count=1 %>
+            <% for (const course of courses) { %>
+              <input type="text" hidden="false" value="test">
+              <tr class="bg-amber-100">
+                <td class="border border-slate-700 ...">
+                  <%= count %>
+                </td>
+                <td class="border border-slate-700 ...">
+                  <%= course.course_name %>
+                </td>
+                <td class="border border-slate-700 ...">
+                  <%= course.lec_name %>
+                </td>
+                <td class="border border-slate-700 ...">
+                  <%= course.date %>
+                </td>
+                <td class="border border-slate-700 ...">
+                  <%= course.time %>
+                </td>
+                <td class="border border-slate-700 ...">
+                  <%= course.des %>
+                </td>
+                <input type="hidden" value="<%= course.id %>" name="id">
+                <td class="border border-slate-700 ...">
+                  <a href="/verify-id/<%= course.id %>">
+                    <button
+                      class="w-[140px] h-[54px] px-4 py-2.5 bg-amber-200 from-orange-600 to-yellow-400 rounded-full justify-center items-center gap-2 inline-flex border-2 border-transparent transition-transform transform hover:scale-105 ml-10 ">
+                      <div class="text-black text-2xl font-normal font-['KMITLGO']">edit</div>
+                    </button>
+                  </a>
+              </tr>
+              <% count++ %>
+                <% } %>
+        </tbody>
+
+      </table>
+    </div>
+</body>
+
+</html>

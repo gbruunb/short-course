@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Short Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-black">
+    <!-- <h1>Sign-in</h1>
+    <div class="container m-10">
+        <form method="POST" action="/signin">
+            <div class="space-y-12">
+                
+                <div class="border-b border-gray-900/10 pb-12">
+                    
+
+                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+
+                        <div class="sm:col-span-3">
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">รหัสนักศึกษา</label>
+                            <div class="mt-2">
+                                <input type="text" name="student_id" id="first-name" autocomplete="given-name"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div class="sm:col-span-3">
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">รหัสผ่าน</label>
+                            <div class="mt-2">
+                                <input type="password" name="password" id="first-name" autocomplete="given-name"
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+                <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
+                <button type="submit"
+                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+            </div>
+        </form>
+    </div> -->
+    <form action="/auth" method="POST">
+        <div class="flex h-screen justify-center items-center flex-col">
+            <div class="text-white text-5xl font-bold font-['KMITLGO']  mt-[-100px] flex items-center">
+                <span class="mr-2">SIGN IN</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="SVG Sign in"
+                    class="w-10 h-10" />
+            </div>
+            <div class="text-white text-lg ml-[-320px] mt-10 mb-2">Student ID :</div>
+            <input type="text" name="student_id" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                placeholder="  Enter your Student ID" />
+            <div class="text-white text-lg ml-[-320px] mt-6 mb-2">Password :</div>
+            <input type="text" name="years" class="rounded-2xl h-[60px] text-black w-[425px] p-2"
+                placeholder="  Enter your Password" />
+            <a href="#">
+                <button
+                    class="w-[120px] h-[39px] px-4 py-2.5 bg-amber-200 from-orange-600 to-yellow-400 rounded-full justify-center items-center gap-2 inline-flex ml-[300px] mt-[20px]">
+                    <div class="text-black text-xl font-normal font-['KMITLGO']">SIGN-IN</div>
+                </button>
+        </div>
+    </form>
+    <div class="absolute top-[625px] left-0 right-0 h-[20px] bg-[#DD501C]"></div>
+    <div class="absolute bottom-0 w-full h-[70px] bg-[#DD501C]"></div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "cs-short-course-reg",
+  "version": "1.0.0",
+  "description": "Project OS Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbruunb/cs-short-course-reg.git"
+  },
+  "author": "Prachya Sangkharat and Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbruunb/cs-short-course-reg/issues"
+  },
+  "homepage": "https://github.com/gbruunb/cs-short-course-reg#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-mysql-session": "^3.0.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.0.1",
+    "mysql2": "^3.6.2",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-local": "^1.0.0",
+    "randomstring": "^1.3.0",
+    "sequelize": "^6.33.0"
+  }
+}
